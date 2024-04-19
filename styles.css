@@ -102,12 +102,6 @@ text-area {
     text-align: left;
 }
 
-@media (max-width: 900px) {
-    #card-container, #input-container {
-        flex-direction: column;
-    }
-}
-
 #file-container, #text-container {
     width: 25%;
     min-width: 344px;
@@ -123,4 +117,12 @@ text-area {
     display: flex;
 }
 
+@media (max-width: 900px) {
+    #card-container, #input-container {
+        flex-direction: column;
+    }
+    #instructions {
+        font-size: 18px;
+    }
+}
 
