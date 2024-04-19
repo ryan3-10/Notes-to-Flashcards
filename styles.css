@@ -1,0 +1,126 @@
+:root {
+    --black: #000814;
+    --dark-blue: #001d3d;
+    --blue: #003566;
+    --orange: #ffc300;
+    --yellow: #ffd60a;
+}
+
+body {
+    background-color: var(--dark-blue);
+    font: var(--yellow)
+}
+
+main {
+    width: 80%;
+    margin: auto;
+    color: white;
+    padding-bottom: 25px;
+    font-size: 24px;
+}
+
+h1 {
+    text-align: center;
+    min-width: 212px;
+}
+
+#instructions {
+    width: 60%;
+    min-width: 244px;
+    margin: auto;
+    display: none;
+    border: thick double white;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+.card {
+    width: 25%;
+    min-width: 344px;
+    height: 150px;
+    border: thick solid white;
+    text-align: center;
+    padding: 5%;
+    margin: 20px 10px;
+}
+
+#input-file {
+    height: 2em;
+    font-size: 18px;
+    min-width: 190px;
+    display: block;
+    margin: auto;
+}
+
+#shuffle-check {
+    height: 0.8em;
+    min-width: 50px;
+}
+
+#checkbox-container, #shuffle-check {
+    font-size: 38px;
+}
+
+button, input, #answer {
+    cursor: pointer
+}
+
+#navigation-container, #checkbox-container {
+    text-align: center;
+}
+
+span, .navigation-button, #clear-button {
+    font-size: 60px;
+}
+
+.navigation-button {
+    background-color: var(--dark-blue);
+    border: none;
+    color: var(--yellow)
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#clear-button {
+    display: block;
+    margin: auto;
+    border: thick double var(--orange);
+    color: var(--blue);
+    margin-top: 15px;
+}
+
+.add-input, #show-hide-instructions {
+    font-size: 24px;
+    background-color: #ffc300;
+}
+
+text-area {
+    text-align: left;
+}
+
+@media (max-width: 900px) {
+    #card-container, #input-container {
+        flex-direction: column;
+    }
+}
+
+#file-container, #text-container {
+    width: 25%;
+    min-width: 344px;
+    margin: 50px 10px;
+}
+
+#show-hide-instructions {
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+#text-buttons-container {
+    display: flex;
+}
+
+
