@@ -8,7 +8,7 @@
 
 body {
     background-color: var(--dark-blue);
-    font: var(--yellow)
+    font: var(--yellow);
 }
 
 main {
@@ -62,7 +62,7 @@ h1 {
 }
 
 button, input, #answer {
-    cursor: pointer
+    cursor: pointer;
 }
 
 #navigation-container, #checkbox-container {
@@ -76,7 +76,7 @@ span, .navigation-button, #clear-button {
 .navigation-button {
     background-color: var(--dark-blue);
     border: none;
-    color: var(--yellow)
+    color: var(--yellow);
 }
 
 .container {
@@ -125,4 +125,3 @@ text-area {
         font-size: 18px;
     }
 }
-
