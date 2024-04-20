@@ -9,53 +9,53 @@
     <body>
         <main>
             <h1>Notes to Flash Cards</h1>
-            <div id="checkbox-container">
-                <button id="show-hide-instructions" type="button">Show instructions</button>
-                <input id="shuffle-check" type="checkbox">Shuffle</input>
-            </div>
-            <div id="instructions">
-                <p>- Input your notes (or any content you want to generate flash cards from) as a file or text below. Make sure the content follows this format:</p>
-                <p>{Question}?<br>{Answer}</p>
-                <p>- The question mark must be included, and the question and answer should be on seperate lines. Blank lines inbetween different questions, 
-                or inbetween a question and its answer, are okay.</p>
-                <p> - Try using the sample text below. You'll notice an alert from the page saying that not all lines in the text have questions and answers.
-                    This is because of the top line: "Sample text". The program will still generate the flashcards, ignoring this first line.</p>
-            </div>
-            <div class="container" id="input-container">
-                <div id="file-container">
-                    <input id="input-file" type="file">
-                    <button class="add-input" id="add-file-button" type="button">Add cards with file</button>
+            <div id="settings-screen">
+                <div id="instructions">
+                    <p>- Input your notes (or any content you want to generate flash cards from) as a file or text below. Make sure the content follows this format:</p>
+                    <p>{Question}?<br>{Answer}</p>
+                    <p>- The question mark must be included, and the question and answer should be on seperate lines. Blank lines inbetween different questions, 
+                    or inbetween a question and its answer, are okay.</p>
+                    <p> - Try using the sample text below. You'll notice an alert from the page saying that not all lines in the text have questions and answers.
+                        This is because of the top line: "Sample text". The program will still generate the flashcards, ignoring this first line.</p>
                 </div>
-                <div id="text-container">
-                    <textarea id="text-box" rows="10" cols="39">
-Sample text
-
-Which planet is closest to the sun?
-Mercury
-
-Who was the 2nd president of The United States?
-John Adams
-
-2 + 8 = what?
-10
-                    </textarea>
-                    <div id="text-buttons-container">
-                        <button class="add-input" id="add-text-button" type="button">Add cards with text</button>
-                        <button class="add-input" id="clear-text-button" type="button">Clear text</button>
+                <div id="settings-container">
+                    <div id="left-side">
+                        <div id="file-container">
+                            <input id="input-file" type="file">
+                            <button class="add-input" id="add-file-button" type="button">Add cards with file</button>
+                        </div>
+                        <div id="text-container">
+                            <textarea id="text-box" rows="10" cols="39">
+                            </textarea>
+                            <div id="text-buttons-container">
+                                <button class="add-input" id="add-text-button" type="button">Add cards with text</button>
+                                <button class="add-input" id="clear-text-button" type="button">Clear text</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="right-side">
+                        <button id="clear-button" type="button">Clear Deck</button>
+                        <div id="num-of-cards-container">Cards in deck: <span id="card-total">0</span></div>
+                        <div id="checkbox-container">
+                            <input id="shuffle-check" type="checkbox">Shuffle</input>
+                        </div>
+                        <button id="show-cards-button" type="button">Show Cards</button>
                     </div>
                 </div>
             </div>
-            <div class="container" id="card-container">
-                <div id="question" class="card"></div>
-                <div id="answer" class="card"></div>
+
+            <div id="card-screen">
+                <div class="container" id="card-container">
+                    <div id="question" class="card"></div>
+                    <div id="answer" class="card"></div>
+                </div>
+                <div id="navigation-container">
+                    <button class="navigation-button" id="previous-button" type="button"><</button>
+                    <span id="card-count">0 of 0</span>
+                    <button class="navigation-button" id="next-button" type="button">></button>
+                </div>
+                <button id="to-settings">Back to settings</button>
             </div>
-            
-            <div id="navigation-container">
-                <button class="navigation-button" id="previous-button" type="button"><</button>
-                <span id="card-count">0 of 0</span>
-                <button class="navigation-button" id="next-button" type="button">></button>
-            </div>
-            <button id="clear-button" type="button">Clear Deck</button>
         </main>
         <script src="script.js"></script>
     </body>

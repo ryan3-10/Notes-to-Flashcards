@@ -10,13 +10,25 @@ const clearTextButton = document.getElementById("clear-text-button");
 const textBox = document.getElementById("text-box");
 const addWithFileButton = document.getElementById("add-file-button");
 const addWithTextButton = document.getElementById("add-text-button");
-const showHideInstructions = document.getElementById("show-hide-instructions");
-const instructions = document.getElementById("instructions");
+const showCardsButton = document.getElementById("show-cards-button");
+const showSettingsButton = document.getElementById("to-settings");
+const settingsScreen = document.getElementById("settings-screen");
+const cardScreen = document.getElementById("card-screen");
+const cardTotalSpan = document.getElementById("card-total");
 
-let instructionsShowing = false;
 let questions = [];
 let shuffledQuestions = [];
 let currentCard = 0;
+
+showCardsButton.addEventListener("click", () => {
+    settingsScreen.style.display = "none";
+    cardScreen.style.display = "block";
+});
+
+showSettingsButton.addEventListener("click", () => {
+    cardScreen.style.display = "none";
+    settingsScreen.style.display = "block";
+});
 
 clearTextButton.addEventListener("click", () => {
     textBox.value = "";
@@ -48,18 +60,6 @@ addWithTextButton.addEventListener("click", () => {
     generateCards(textBox.value);
 });
 
-showHideInstructions.addEventListener("click", (e) => {
-    if (instructionsShowing) {
-        instructions.style.display = "none";
-        instructionsShowing = false;
-        e.target.textContent = "Show Instructions";
-    } else {
-        instructions.style.display = "block";
-        instructionsShowing = true;
-        e.target.textContent = "Hide Instructions";
-    }
-});
-
 answerCard.addEventListener("click", e => {
     if (e.target.textContent === "") {
         return;
@@ -75,6 +75,7 @@ clearButton.addEventListener("click", () => {
     shuffledQuestions = [];
     currentCard = 0;
     cardCountSpan.textContent = "0 of 0";
+    updateCardTotal();
     updateCards();
 });
 
@@ -123,6 +124,10 @@ const updateCards = () => {
     cardCountSpan.textContent = `${currentCard + 1} of ${questions.length}`;
 }
 
+const updateCardTotal = () => {
+    cardTotalSpan.textContent = questions.length;
+}
+
 const generateCards = (fileContents) => {
     const lines = fileContents.split("\n");
     let question = null;
@@ -169,5 +174,6 @@ const generateCards = (fileContents) => {
         shuffledQuestions.push({question, answer});
     }
     shuffleArray(shuffledQuestions);
+    updateCardTotal();
     updateCards();
 }
