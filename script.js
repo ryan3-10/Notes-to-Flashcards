@@ -15,7 +15,18 @@ const showSettingsButton = document.getElementById("to-settings");
 const settingsScreen = document.getElementById("settings-screen");
 const cardScreen = document.getElementById("card-screen");
 const cardTotalSpan = document.getElementById("card-total");
+const sampleText = `Sample text
 
+Which planet is closest to the sun?
+Mercury
+                                
+Who was the 2nd president of The United States?
+John Adams
+                                
+2 + 8 = what?
+10`;
+
+textBox.value = sampleText;
 let questions = [];
 let shuffledQuestions = [];
 let currentCard = 0;

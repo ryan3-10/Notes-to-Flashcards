@@ -44,13 +44,12 @@ h1 {
     font-size: 32px;
 }
 
-#settings-container {
-    margin: 50px auto 0 auto;
-    padding: 20px;
-    width: 66%;
-    display: flex;
-    justify-content: space-between;
+#checkbox-container {
+    margin-top: 15px;
+    text-align: left;
 }
+
+
 
 button, input, #answer {
     cursor: pointer;
@@ -72,15 +71,23 @@ button, input, #answer {
     align-items: center;
 }
 
-#settings-screen button, #to-settings {
+button {
     font-size: 24px;
     background-color: #ffc300;
+    border: thick solid black;
 }
 
-#right-side {
+#top-side, #bottom-side {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 67%;
+    margin: 15px auto 30px auto;
+}
+
+#top-side {
+    border-bottom: 15px solid rgb(182, 177, 177);
+    padding-bottom: 30px;
 }
 
 #card-screen {
@@ -92,18 +99,13 @@ button, input, #answer {
     min-width: 344px;
 }
 
-#text-container {
-    margin-top: 40px;
-    margin-bottom: 30px;
-}
-
 #text-buttons-container {
     display: flex;
 }
 
 .card {
     width: 25%;
-    min-width: 344px;
+    min-width: 300px;
     height: 150px;
     border: thick solid white;
     text-align: center;
@@ -119,19 +121,24 @@ button, input, #answer {
     text-align: center;
 }
 
-#to-settings {
+#to-settings, #checkbox-container {
     display: block;
     margin: 15px auto 0 auto;
+    width: 200px;
 }
 
-@media (max-width: 900px) {
-    #card-container, #settings-container {
+.wide-button {
+    width: 200px;
+}
+
+@media (max-width: 1000px) {
+    #card-container, #top-side, #bottom-side {
         flex-direction: column;
+        align-items: center;
+        gap: 15px;
     }
-   
+    
     #instructions {
         font-size: 18px;
     }
-
 }
-
