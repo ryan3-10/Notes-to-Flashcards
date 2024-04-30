@@ -29,7 +29,6 @@ h1 {
     margin-right: auto;
     text-align: center;
     min-width: 212px;
-    background-color: black;
 }
 
 #instructions {
@@ -122,9 +121,7 @@ button {
     margin: 20px 10px;
 }
 
-#card-screen {
-    margin-top: 6rem;
-}
+
 
 #navigation-container {
     text-align: center;
@@ -157,5 +154,9 @@ button {
     
     #instructions {
         font-size: 18px;
+    }
+
+    h1 {
+        font-size: 32px;
     }
 }
